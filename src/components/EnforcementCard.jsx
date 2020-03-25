@@ -10,18 +10,18 @@ const EnforcementCard = ({ sortedData }) => {
         <div>
             <Container>
                         <Row>
-                            <Col><h3>Parking Lot Name</h3></Col>
-                            <Col><h3>Enforcer Username</h3></Col>
-                            <Col><h3>Min Since Last Enforced</h3></Col>
+                            <Col><h3 className="title">Parking Lot Name</h3></Col>
+                            <Col><h3 className="title">Enforcer Username</h3></Col>
+                            <Col><h3 className="title">Min Since Last Enforced</h3></Col>
                         </Row>
                         <br></br>
 
                     {sortedData.map(obj =>
                         
                         <Row>
-                            <Col><div>{obj.name}</div></Col>
-                            <Col><div>{obj.username}</div></Col>
-                            <Col><div>{obj.minsPassed}</div></Col>
+                            <Col><div className="font">{obj.name}</div></Col>
+                            <Col><div className="font">{obj.username}</div></Col>
+                            <Col><div className="font">{obj.minsPassed}</div></Col>
                         </Row>
                     )}
             </Container>
