@@ -16,7 +16,7 @@ Javascript, Node, React, HTML, CSS </br>
 
 On local machine, clone the project repository:
 ```
-$ git clone 
+$ git clone https://github.com/jessicahojh/garage_leaderboard.git
 ```
 In the project root directory, install dependencies:
 ```
@@ -28,5 +28,13 @@ $ npm start
 ```
 
 <a name="logic"/></a>
+1. Iterate over each garage object from the first API call <br>
+2. This allows us to get and also save the garage's "pk" and "name" <br>
+3. Second API call takes in the "pk" <br>
+4. From there, for each 2nd API call, we just look at the first enforcement object <br>
+5. Create an array to save those first enforcement objects mentioned in step 4 along with the garage name <br>
+6. Return the sorted array mentioned in step 5 by the minutes since last enforcement, in order from most the least recently enforced <br>
 
-<a name="shortAnswers"/></a>
+Note: First API gives us an array of garage objects. Second API gives us an array of enforcement objects for a specific garage <br>
+
+<a name="shortanswers"/></a>
