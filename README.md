@@ -28,6 +28,7 @@ $ npm start
 ```
 
 <a name="logic"/></a>
+## Logic/ Explanation
 1. Iterate over each garage object from the first API call <br>
 2. This allows us to get and also save the garage's "pk" and "name" <br>
 3. Second API call takes in the "pk" <br>
@@ -38,3 +39,4 @@ $ npm start
 Note: First API gives us an array of garage objects. Second API gives us an array of enforcement objects for a specific garage <br>
 
 <a name="shortanswers"/></a>
+## Short Answers
