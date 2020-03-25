@@ -41,18 +41,18 @@ async function doAll() {
   let secondCall = await axios.all(promises)
 
   secondCall.forEach(function(each){
-      let pid = each.config.params.spot
-      let pname = gD[pid]
+    let pid = each.config.params.spot
+    let pname = gD[pid]
       
-      if (each.data[0] !== undefined) { // some parking lots don't have any enforcements yet
-          let mins_passed = (epochTimeNow - each.data[0].created_at)/60;
-          arr.push(new recentlyEnforcedSpot(pid,
-                                            pname,
-                                            each.data[0].enforcer_username,
-                                            each.data[0].created_at,
-                                            Math.floor(mins_passed)
-                                            ))
-      }
+    if (each.data[0] !== undefined) { // some parking lots don't have any enforcements yet
+      let mins_passed = (epochTimeNow - each.data[0].created_at)/60;
+      arr.push(new recentlyEnforcedSpot(pid,
+                                        pname,
+                                        each.data[0].enforcer_username,
+                                        each.data[0].created_at,
+                                        Math.floor(mins_passed)
+                                        ))
+    }
   })
 
   return arr.sort(compare);
