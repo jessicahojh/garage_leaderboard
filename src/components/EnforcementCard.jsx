@@ -21,7 +21,7 @@ const EnforcementCard = ({ sortedData }) => {
                         <Row>
                             <Col><div>{obj.name}</div></Col>
                             <Col><div>{obj.username}</div></Col>
-                            <Col><div>{obj.mins_passed}</div></Col>
+                            <Col><div>{obj.minsPassed}</div></Col>
                         </Row>
                     )}
             </Container>
